@@ -2,8 +2,8 @@
 
 return [
 	'database' => [
-		'name' => 'basic',
-		'username' => 'root',
+		'name' => '',
+		'username' => '',
 		'password' => '',
 		'connection' => 'mysql:host=127.0.0.1',
 		'option' => []
