@@ -1,23 +1,23 @@
 <?php
-class Post
-{
-	public $title;
-	public $published;
+// class Post
+// {
+// 	public $title;
+// 	public $published;
 
-	public function __construct($title, $published)
-	{
-		$this->title = $title;
-		$this->published = $published;		
-	}
+// 	public function __construct($title, $published)
+// 	{
+// 		$this->title = $title;
+// 		$this->published = $published;		
+// 	}
 
-}
+// }
 
-$posts = [
-	new Post('Data Pertama', true),
-	new Post('Data Kedua', true),
-	new Post('Data Ketiga', true),
-	new Post('Data Keempat', false)
-];
+// $posts = [
+// 	new Post('Data Pertama', true),
+// 	new Post('Data Kedua', true),
+// 	new Post('Data Ketiga', true),
+// 	new Post('Data Keempat', false)
+// ];
 
 // $unpublishedPost = array_filter($posts, function($post) {
 // 	return ! $post->published;

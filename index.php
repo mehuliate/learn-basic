@@ -1,5 +1,8 @@
 <?php
-$database = require 'core/bootstrap.php';
+
+//entry point application
+require 'vendor/autoload.php';
+require 'core/bootstrap.php';
 
 require Router::load('routes.php')
 	->direct(Request::uri(), Request::method());
