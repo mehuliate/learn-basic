@@ -1,7 +1,10 @@
 <?php
 
 Class Router {
-	protected $routes = [];
+	protected $routes = [
+		'GET' => [],
+		'POST' => []
+	];
 
 	public static function load($file)
 	{
@@ -14,11 +17,21 @@ Class Router {
 		$this->routes = $routes;
 	}
 
-	public function direct($uri)
+	public function get($url, $controller)
+	{
+		$this->routes['GET'][$url] = $controller;
+	}
+
+	public function post($url, $controller)
+	{
+		$this->routes['POST'][$url] = $controller;
+	}
+
+	public function direct($uri, $requestType)
 	{
 		//about/culture
-		if (array_key_exists($uri, $this->routes)){
-			return $this->routes[$uri];
+		if (array_key_exists($uri, $this->routes[$requestType])){
+			return $this->routes[$requestType][$uri];
 		}
 
 		throw new Exception("Error Processing Request");

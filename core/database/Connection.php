@@ -9,7 +9,7 @@ class Connection
 				$config['connection'].';dbname='.$config['name'],
 				$config['username'],
 				$config['password'],
-				$config['option']
+				$config['options']
 			);
 		} catch(PDOException $e){
 			die($e->getMessage());
